@@ -33,7 +33,7 @@ jobs:
         run: pip install mkdocs-material
       - name: Build & Deploy Document
         run: |
-          cd "$GITHUB_WORKSPACE/my-docs"
+          cd "$GITHUB_WORKSPACE"
           echo "Running mkdocs from: $(pwd)"
           mkdocs --version
           mkdocs gh-deploy --force
