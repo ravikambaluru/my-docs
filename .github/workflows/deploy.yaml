@@ -20,7 +20,9 @@ jobs:
       - name: Debug workspace
         run: |
          pwd
-         ls -R
+         ls -l
+         cd ./
+         ls -l
 
       - name: Setup Python
         uses: actions/setup-python@v6
