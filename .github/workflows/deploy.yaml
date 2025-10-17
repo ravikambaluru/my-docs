@@ -20,9 +20,9 @@ jobs:
       - name: Debug workspace
         run: |
          pwd
-         ls -l
+         ls -la
          cd ./
-         ls -l
+         ls -la
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -32,6 +32,10 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
       - name: Build & Deploy Document
-        run: mkdocs gh-deploy --force
+        run: |
+          cd "$GITHUB_WORKSPACE/my-docs"
+          echo "Running mkdocs from: $(pwd)"
+          mkdocs --version
+          mkdocs gh-deploy --force
 
 
