@@ -18,7 +18,7 @@ jobs:
         with:
           path: main
       - name: Debug workspace
-        run: echo pwd
+        run: pwd
 
       - name: Setup Python
         uses: actions/setup-python@v6
