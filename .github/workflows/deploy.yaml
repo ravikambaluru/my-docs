@@ -17,6 +17,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: main
+      - name: Debug workspace
+        run: echo pwd
+
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
