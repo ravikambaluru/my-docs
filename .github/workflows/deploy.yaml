@@ -18,7 +18,9 @@ jobs:
         with:
           path: main
       - name: Debug workspace
-        run: pwd
+        run: |
+         pwd
+         ls -R
 
       - name: Setup Python
         uses: actions/setup-python@v6
