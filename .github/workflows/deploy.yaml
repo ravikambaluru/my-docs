@@ -1,0 +1,2 @@
+name: DEPLOY_MYDOCS
+run-name: ${{github.workflow}}-${{github.job}}
