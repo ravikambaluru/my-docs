@@ -23,6 +23,7 @@ jobs:
           python-version: '3.13'
           cache: 'pip'
       - name: Install dependencies
+        working-directory: ./my-docs
         run: pip install -r ./my-docs/requirements.txt
       - name: Build & Deploy Document
         run: mkdocs gh-deploy --force
