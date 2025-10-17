@@ -23,8 +23,7 @@ jobs:
           python-version: '3.13'
           cache: 'pip'
       - name: Install dependencies
-        working-directory: /home/runner/work/my-docs/my-docs/./my-docs
-        run: pip install -r ./my-docs/requirements.txt
+        run: pip install mkdocs-material
       - name: Build & Deploy Document
         run: mkdocs gh-deploy --force
 
