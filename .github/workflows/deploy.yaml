@@ -32,6 +32,8 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
       - name: Build & Deploy Document
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd "$GITHUB_WORKSPACE"
           echo "Running mkdocs from: $(pwd)"
